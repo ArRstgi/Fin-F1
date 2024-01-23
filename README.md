@@ -3,7 +3,12 @@
 ## With Docker:
 
 Run the following line in the terminal:
+
 `docker compose up --build`
+
+Then go to this link to use the chatbot:
+
+[http://localhost:8501/](http://localhost:8501/)
 
 ## Without Docker:
 
@@ -22,6 +27,10 @@ Run the following line in the terminal:
 Then run:
 
 `streamlit run app.py --server.port=8501 --server.address=0.0.0.0`
+
+Then go to this link to use the chatbot:
+
+[http://localhost:8501/](http://localhost:8501/)
 
 # Documentation 
 
