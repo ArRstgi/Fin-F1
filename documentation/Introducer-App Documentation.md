@@ -20,7 +20,7 @@ Therefore, I decided to use the Open AI API to get access to gpt-3.5-turbo for m
 
 # 2. Database Creation
 
-![[database_creation.jpg]]
+![Database Creation Flowchart](https://github.com/ArRstgi/introducer-app/blob/main/documentation/database_creation.jpg)
 ### 2.1 Data
 
 In terms of data, I have simply written out a word document with some information about myself (hobbies, studies, food preferences) along with the data from my resume. I converted this document and it has been used as the external source for facts about myself.
@@ -36,7 +36,7 @@ I have decided to use ChromaDB to create the vector database since it is fully i
 
 # 3. Retrieval Techniques
 
-![[retrieval_chain.jpg]]
+![Retrieval Chain Flowchart](https://github.com/ArRstgi/introducer-app/blob/main/documentation/retrieval_chain.jpg)
 
 The next decision I faced was deciding which retrieval technique to use to get data from the vector database. The following were the 3 options I was considering:
 ### 3.1 Semantic Similarity Search
@@ -93,7 +93,7 @@ Finally, I used the docker init command in the terminal to create the files requ
 
 # 6. Full Architecture Diagram
 
-![[full.jpg]]
+![Full Architecture Flowchart](https://github.com/ArRstgi/introducer-app/blob/main/documentation/full.jpg)
 
 
 # 7. Evaluation
