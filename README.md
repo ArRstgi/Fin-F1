@@ -7,6 +7,14 @@ Run the following line in the terminal:
 
 ## Without Docker:
 
+Create a python virtual environment:
+
+`python3 -m venv .venv`
+
+Activate the virtual environment:
+
+`. .venv/bin/activate`
+
 Run the following line in the terminal:
 
 `python -m pip install -r requirements.txt`
