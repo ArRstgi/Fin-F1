@@ -1,5 +1,5 @@
 import streamlit as st
-from rag_implementation import get_response
+from src.rag_implementation import get_response
 
 # set initial message
 if "messages" not in st.session_state.keys():
