@@ -4,7 +4,7 @@ from src.rag_implementation import get_response
 # set initial message
 if "messages" not in st.session_state.keys():
     st.session_state.messages = [
-        {"role": "introducer", "content": "Hi, my name is Arush. What would you like to know about me?"}
+        {"role": "Fin F1", "content": "Hi, I am the Fin F1 bot. What would you like to know about the Formula 1 Power Unit Financial Regulations ?"}
     ]
     
 if "messages" in st.session_state.keys():
@@ -23,11 +23,11 @@ if user_prompt is not None:
         st.write(user_prompt)
         
         
-if user_prompt is not None and st.session_state.messages[-1]["role"] != "introducer":
-    with st.chat_message("introducer"):
+if user_prompt is not None and st.session_state.messages[-1]["role"] != "Fin F1":
+    with st.chat_message("Fin F1"):
         with st.spinner("Loading..."):
             rag_response = get_response(user_prompt)
             st.write(rag_response)
             
-    new_rag_response = {"role": "introducer", "content": rag_response}
+    new_rag_response = {"role": "Fin F1", "content": rag_response}
     st.session_state.messages.append(new_rag_response)
