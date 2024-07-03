@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "fin-f1"
+version = "0.1.0"
+description = "A Chatbot that allows F1 team to fin information about the Formula 1 Power Unit Financial Regulations Issue 6 (06/11/24)"
+authors = ["Arstgi <arushrastogi2@outlook.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+langchain = "^0.2.6"
+streamlit = "^1.36.0"
+ipykernel = "^6.29.5"
+langchain-community = "^0.2.6"
+pypdf = "^4.2.0"
+sentence-transformers = "^3.0.1"
+ipywidgets = "^8.1.3"
+chromadb = "^0.5.3"
+protobuf = "3.20.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
