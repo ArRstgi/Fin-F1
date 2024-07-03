@@ -4,7 +4,7 @@ from langchain.chains import ConversationalRetrievalChain
 from langchain_openai import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 
-def embedding_model() -> SentenceTransformerEmbeddings:
+def get_embedding_model() -> SentenceTransformerEmbeddings:
     
     """Defines the model for embedding
 
@@ -18,7 +18,7 @@ def embedding_model() -> SentenceTransformerEmbeddings:
     
     return embedding_model
 
-def vector_load(collection_name:str, embedding_model: SentenceTransformerEmbeddings):
+def load_vector_db(collection_name:str, embedding_model: SentenceTransformerEmbeddings):
     
     """Loads the created vector database
 
@@ -35,7 +35,7 @@ def vector_load(collection_name:str, embedding_model: SentenceTransformerEmbeddi
     return vector_db
     
 
-def chat_model(temperature: float=0.5, model_name: str="gpt-3.5-turbo-1106") -> ChatOpenAI:
+def get_chat_model(temperature: float=0.5, model_name: str="gpt-3.5-turbo-1106") -> ChatOpenAI:
     
     """Defines the chat model and its parameters
 
@@ -48,7 +48,7 @@ def chat_model(temperature: float=0.5, model_name: str="gpt-3.5-turbo-1106") -> 
     return model
 
 
-def chat_history_implementation() -> ConversationBufferMemory:
+def get_chat_history_enabler() -> ConversationBufferMemory:
     
     """Creates the ability for chat history
 
@@ -62,7 +62,7 @@ def chat_history_implementation() -> ConversationBufferMemory:
     return chat_history
 
 
-def qa_chain_creation(model: ChatOpenAI, chat_history: ConversationBufferMemory, vector_db) -> ConversationalRetrievalChain.from_llm:
+def get_qa_chain(model: ChatOpenAI, chat_history: ConversationBufferMemory, vector_db) -> ConversationalRetrievalChain.from_llm:
     
     """Creates the answer retrieval chain for the questions
 
@@ -89,15 +89,15 @@ def get_response(question: str) -> str:
         str: The response from the LLM
     """
     
-    embedder = embedding_model()
+    # embedder = embedding_model()
     
-    vector_database = vector_load("arush_data", embedder)
+    vector_database = load_vector_db("fin_f1_data", embedding_model=get_embedding_model)
 
-    chatbot_model = chat_model()
+    # chatbot_model = chat_model()
     
-    chat_history = chat_history_implementation()
+    # chat_history = chat_history_implementation()
 
-    qa_chain = qa_chain_creation(chatbot_model, chat_history, vector_database)
+    qa_chain = get_qa_chain(model=get_chat_model, chat_history=get_chat_history_enabler, vector_db=vector_database)
     
     context = """
     You are a chatbot. Your name is Arush. It is very important to keep your answers to 3 sentences or less.
