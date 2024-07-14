@@ -2,7 +2,7 @@
 name = "fin-f1"
 version = "0.1.0"
 description = "A Chatbot that allows F1 team to fin information about the Formula 1 Power Unit Financial Regulations Issue 6 (06/11/24)"
-authors = ["Arstgi <arushrastogi2@outlook.com>"]
+authors = ["Arstgi"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
