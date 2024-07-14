@@ -1,45 +1,3 @@
-## What is Fin-F1?
-
-Fin-F1 is an LLM powered chatbot that allowers users to chat with the data from the Formula 1 Power Unit Financial Regulations Issue 6 (06/11/24). It is intended to provide an easy and quick way for people to get information from a document that might be difficult to parse manually.
-
-##  Running the app
-
-Firstly, create a .env file. In this file add an environment variable as follows - OPENAI_API_KEY="(key)", where (key) is your own OpenAI API key.
-
-### With Docker:
-
-Run the following line in the terminal:
-
-`docker compose up --build`
-
-Then go to this link to use the chatbot:
-
-[http://localhost:8501/](http://localhost:8501/)
-
-### Without Docker:
-
-Create a python virtual environment:
-
-`python3 -m venv .venv`
-
-Activate the virtual environment:
-
-`. .venv/bin/activate`
-
-Run the following line in the terminal:
-
-`python -m pip install -r requirements.txt`
-
-Then run:
-
-`streamlit run app.py --server.port=8501 --server.address=0.0.0.0`
-
-Then go to this link to use the chatbot:
-
-[http://localhost:8501/](http://localhost:8501/)
-
-# Documentation 
-
 
 ## 1. Introduction
 
@@ -62,8 +20,7 @@ Therefore, I decided to use the Open AI API to get access to gpt-4o for my chatb
 
 ## 2. Database Creation
 
-![database_creation_fin.jpg](https://github.com/ArRstgi/Fin-F1/blob/f1-update/documentation/database_creation_fin.jpg)
-
+![[database_creation_fin.jpg]]
 ### 2.1 Data
 
 In terms of data, I have used a pdf download of the Formula 1 Power Unit Financial Regulations Issue 6 from the [FIA Website](https://www.fia.com/sites/default/files/fia_formula_1_pu_financial_regulations_-_issue_6_-_2024-06-11.pdf)
@@ -120,7 +77,8 @@ Finally, I used the docker init command in the terminal to create the files requ
 
 ## 6. Full Architecture Diagram
 
-![full_fin.jpg](https://github.com/ArRstgi/Fin-F1/blob/f1-update/documentation/full_fin.jpg)
+![[full_fin.jpg]]
+
 
 ## 7. Evaluation
 
@@ -128,8 +86,8 @@ Finally, I used the docker init command in the terminal to create the files requ
 
 1. ~~The Chatbot struggles to follow up on answers when asked questions such as "why" or "what" or similar that do not have specific details that can be searched for.~~ **Currently part of issue 9**
 
-2. ~~The addition of context by concatenating 2 strings is simple and workable, but finding a more elegant solution could be better.~~
-	~~1. Perhaps using the PromptTemplate or ChatPromptTemplate classes from LangChain.~~ **Implemented**
+2. ~~The addition of context by concatenating 2 strings is simple and workable, but finding a more elegant solution could be better.
+	1. Perhaps using the PromptTemplate or ChatPromptTemplate classes from LangChain.~~ **Implemented**
 
 3. ~~This message is being displayed whenever a question is asked - "Number of requested results 20 is greater than number of elements in index 3, updating n_results = 3".~~
 	~~1. The chatbot works perfectly but this message is sent in the terminal.~~

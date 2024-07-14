@@ -1,9 +1,5 @@
 # syntax=docker/dockerfile:1
 
-# Comments are provided throughout this file to help you get started.
-# If you need more help, visit the Dockerfile reference guide at
-# https://docs.docker.com/go/dockerfile-reference/
-
 ARG PYTHON_VERSION=3.10.12
 FROM python:${PYTHON_VERSION}-slim as base
 
@@ -28,4 +24,4 @@ COPY . .
 EXPOSE 8501
 
 # Run the application.
-CMD streamlit run app.py --server.port=8501 --server.address=0.0.0.0
+CMD streamlit run src/app.py --server.port=8501 --server.address=0.0.0.0
