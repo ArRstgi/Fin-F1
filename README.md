@@ -62,7 +62,7 @@ Therefore, I decided to use the Open AI API to get access to gpt-4o for my chatb
 
 ## 2. Database Creation
 
-![database_creation_fin.jpg](https://github.com/ArRstgi/Fin-F1/blob/f1-update/documentation/database_creation_fin.jpg)
+![database_creation_fin.jpg](/documentation/database_creation_fin.jpg)
 
 ### 2.1 Data
 
@@ -120,7 +120,7 @@ Finally, I used the docker init command in the terminal to create the files requ
 
 ## 6. Full Architecture Diagram
 
-![full_fin.jpg](https://github.com/ArRstgi/Fin-F1/blob/f1-update/documentation/full_fin.jpg)
+![full_fin.jpg](/documentation/full_fin.jpg)
 
 ## 7. Evaluation
 
