@@ -126,8 +126,8 @@ Finally, I used the docker init command in the terminal to create the files requ
 
 1. ~~The Chatbot struggles to follow up on answers when asked questions such as "why" or "what" or similar that do not have specific details that can be searched for.~~ **Currently part of issue 9**
 
-2. ~~The addition of context by concatenating 2 strings is simple and workable, but finding a more elegant solution could be better.
-	1. Perhaps using the PromptTemplate or ChatPromptTemplate classes from LangChain.~~ **Implemented**
+2. ~~The addition of context by concatenating 2 strings is simple and workable, but finding a more elegant solution could be better.~~
+	~~1. Perhaps using the PromptTemplate or ChatPromptTemplate classes from LangChain.~~ **Implemented**
 
 3. ~~This message is being displayed whenever a question is asked - "Number of requested results 20 is greater than number of elements in index 3, updating n_results = 3".~~
 	~~1. The chatbot works perfectly but this message is sent in the terminal.~~
