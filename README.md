@@ -4,6 +4,8 @@ Fin-F1 is an LLM powered chatbot that allowers users to chat with the data from 
 
 ##  Running the app
 
+Firstly, create a .env file. In this file add an environment variable as follows - OPEN_AI_API_KEY="<key>", where <key> is your own OpenAI API key.
+
 ### With Docker:
 
 Run the following line in the terminal:
