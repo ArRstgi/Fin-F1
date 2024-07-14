@@ -4,11 +4,9 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import FewShotChatMessagePromptTemplate, ChatPromptTemplate
 from langchain_core.runnables.base import Runnable
-from langchain.chains.combine_documents.stuff import create_stuff_documents_chain
 from langchain_core.output_parsers import StrOutputParser
 from operator import itemgetter
 import os
-from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 
