@@ -1,5 +1,6 @@
 {
     "configurations": [
+
         {
             "name": "Docker: Python - General",
             "type": "docker",
@@ -14,6 +15,21 @@
                 ],
                 "projectType": "general"
             }
+        },
+        {
+            "name": "Python:Streamlit",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "streamlit",
+            "justMyCode": false,
+            "args": [
+                "run",
+                "src/app.py",
+                "--server.port",
+                "8501",
+                "--server.address",
+                "0.0.0.0"
+            ]
         }
     ]
 }
