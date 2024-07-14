@@ -1,4 +1,3 @@
-
 ## 1. Introduction
 
 For my first Generative AI app, I have created a chatbot that leverages OpenAI's GPT-4o model to provide information about the Formula 1 Power Unit Financial Regulations. For developing the chatbot, I have used the LangChain framework and the streamlit library.
@@ -20,7 +19,8 @@ Therefore, I decided to use the Open AI API to get access to gpt-4o for my chatb
 
 ## 2. Database Creation
 
-![[database_creation_fin.jpg]]
+![database_creation_fin.jpg](/documentation/database_creation_fin.jpg)
+
 ### 2.1 Data
 
 In terms of data, I have used a pdf download of the Formula 1 Power Unit Financial Regulations Issue 6 from the [FIA Website](https://www.fia.com/sites/default/files/fia_formula_1_pu_financial_regulations_-_issue_6_-_2024-06-11.pdf)
@@ -77,8 +77,7 @@ Finally, I used the docker init command in the terminal to create the files requ
 
 ## 6. Full Architecture Diagram
 
-![[full_fin.jpg]]
-
+![full_fin.jpg](/documentation/full_fin.jpg)
 
 ## 7. Evaluation
 
@@ -86,8 +85,8 @@ Finally, I used the docker init command in the terminal to create the files requ
 
 1. ~~The Chatbot struggles to follow up on answers when asked questions such as "why" or "what" or similar that do not have specific details that can be searched for.~~ **Currently part of issue 9**
 
-2. ~~The addition of context by concatenating 2 strings is simple and workable, but finding a more elegant solution could be better.
-	1. Perhaps using the PromptTemplate or ChatPromptTemplate classes from LangChain.~~ **Implemented**
+2. ~~The addition of context by concatenating 2 strings is simple and workable, but finding a more elegant solution could be better.~~
+	~~1. Perhaps using the PromptTemplate or ChatPromptTemplate classes from LangChain.~~ **Implemented**
 
 3. ~~This message is being displayed whenever a question is asked - "Number of requested results 20 is greater than number of elements in index 3, updating n_results = 3".~~
 	~~1. The chatbot works perfectly but this message is sent in the terminal.~~
