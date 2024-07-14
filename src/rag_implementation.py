@@ -23,7 +23,6 @@ def _get_chat_model(temperature: float = 0, model_name: str = "gpt-4o") -> ChatO
     """
 
     model = ChatOpenAI(
-        openai_api_key=os.getenv("OPEN_AI_API_KEY"),
         temperature=temperature,
         model_name=model_name,
     )
@@ -118,6 +117,7 @@ def _get_prompt_template() -> FewShotChatMessagePromptTemplate:
     few_shot_prompt = FewShotChatMessagePromptTemplate(
         examples=few_shot_examples,
         example_prompt=few_shot_template,
+        input_variables=["query"],
     )
 
     return few_shot_prompt
