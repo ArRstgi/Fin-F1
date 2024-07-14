@@ -1,6 +1,10 @@
-#  Running the app
+## What is Fin-F1?
 
-## With Docker:
+Fin-F1 is an LLM powered chatbot that allowers users to chat with the data from the Formula 1 Power Unit Financial Regulations Issue 6 (06/11/24). It is intended to provide an easy and quick way for people to get information from a document that might be difficult to parse manually.
+
+##  Running the app
+
+### With Docker:
 
 Run the following line in the terminal:
 
@@ -10,7 +14,7 @@ Then go to this link to use the chatbot:
 
 [http://localhost:8501/](http://localhost:8501/)
 
-## Without Docker:
+### Without Docker:
 
 Create a python virtual environment:
 
@@ -36,7 +40,7 @@ Then go to this link to use the chatbot:
 
 # 1. Introduction
 
-For my Generative AI app prototype, I have created a chatbot that leverages OpenAI's GPT-3.5-Turbo model for LLM tasks. For developing the chatbot, I have used the LangChain framework and the streamlit library.
+For my first Generative AI app, I have created a chatbot that leverages OpenAI's GPT-4o model to provide information about the ormula 1 Power Unit Financial Regulations. For developing the chatbot, I have used the LangChain framework and the streamlit library.
 ### 1.1 LangChain
 
 I chose to use LangChain because of its ease of use and guides when it comes to making chatbots and applying Retrieval-Augmented Generation (RAG) techniques. 
@@ -50,7 +54,7 @@ Initially, I was planning to create a chatbot using a local model like llama-2-7
 2. This led me to realize that it would force the user to also have the capability to run the model locally, which wasn't a guarantee. 
 3. Finally, the Open AI API and other LLM APIs are the industry standard for building Generative AI applications and the value gained from some experience in using them would far outweigh the cost of some LLM calls.
 
-Therefore, I decided to use the Open AI API to get access to gpt-3.5-turbo for my chatbot.
+Therefore, I decided to use the Open AI API to get access to gpt-4o for my chatbot.
 
 
 # 2. Database Creation
